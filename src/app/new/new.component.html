@@ -4,19 +4,18 @@
   Bonjour SI2
 </div>
 
-
 <input
-  (change)="changeColor(colorInput.value)"
+  (change)="changeColor1(colorInput.value)"
   #colorInput
   type="text" class="form-control">
-<input
+
+  <input
     [(ngModel)]="color"
   type="color" class="form-control">
 
-  <button
-  (click)="changeColor(defaultColor)"
+<button
+  (click)="changeColor1(defaultColor)"
   class="btn btn-primary">
   reset color
 </button>
-
-<app-colorfils (sendColorToDad)="recieveDataFromSon($event)"></app-colorfils>
+<app-colorfils (sendColorToDad)="receivecolor($event)"> </app-colorfils>
