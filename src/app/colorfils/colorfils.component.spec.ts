@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilsComponent } from './fils.component';
+import { ColorfilsComponent } from '@angular/cli/tpAngular/src/app/colorfils/colorfils.component';
 
-describe('FilsComponent', () => {
-  let component: FilsComponent;
-  let fixture: ComponentFixture<FilsComponent>;
+describe('ColorfilsComponent', () => {
+  let component: ColorfilsComponent;
+  let fixture: ComponentFixture<ColorfilsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilsComponent ]
+      declarations: [ ColorfilsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilsComponent);
+    fixture = TestBed.createComponent(ColorfilsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

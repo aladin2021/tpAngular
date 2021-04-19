@@ -1,30 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
+import { LoggerService } from 'src/app/services/logger.service';
+import { TodoService } from 'src/app/todo/services/todo.service';
 import { Cv } from '../model/cv';
-import { LoggerService } from '../../services/logger.service';
-import { HelperService } from '../../services/helper.service';
-import { TodoService } from '../../todo/services/todo.service';
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css'],
+  styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-  selectedCv: Cv = null;
+  selectedCv = null;
   date = new Date();
-  constructor(
-    private loggerService: LoggerService,
+  constructor(private loggerService: LoggerService,
+
     private helperService: HelperService,
-    private TodoService: TodoService
-  ) {}
+    private TodoService: TodoService) { }
 
   ngOnInit(): void {
     this.helperService.whoAmI();
     this.loggerService.logger('cc je suis le cvComponent');
   }
-
-  findSelectedCv(selectedCv: Cv) {
+  findSelectedCv(selectedCv: any) {
     this.selectedCv = selectedCv;
     this.TodoService.logger();
+
   }
 }

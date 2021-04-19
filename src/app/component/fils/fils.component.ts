@@ -3,9 +3,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-fils',
   templateUrl: './fils.component.html',
-  styleUrls: ['./fils.component.css'],
+  styleUrls: ['./fils.component.css']
 })
 export class FilsComponent implements OnInit {
+
+
+
+
+
   @Input() myFavoriteColor = 'red';
   @Input() message = '';
   @Output() sendDataToDad = new EventEmitter();
@@ -20,10 +25,9 @@ export class FilsComponent implements OnInit {
   ngOnInit(): void {}
 
   emitEvent() {
-    this.sendDataToDad.emit({
-      message: this.message,
-      fc: this.myFavoriteColor,
-      note: 20,
-    });
+    this.sendDataToDad.emit('cc papa');
   }
+
+
+
 }

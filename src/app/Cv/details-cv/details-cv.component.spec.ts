@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailsCvComponent } from './details-cv.component';
+import { DetailsCvComponent } from '@angular/cli/tpAngular/src/app/Cv/details-cv/details-cv.component';
 
 describe('DetailsCvComponent', () => {
   let component: DetailsCvComponent;
